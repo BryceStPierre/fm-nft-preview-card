@@ -1,0 +1,141 @@
+body {
+  padding: 0 25px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg);
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.card {
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  max-width: 100%;
+  color: var(--soft-blue);
+  background-color: var(--card-bg);
+  box-shadow: 0 0 20px 20px rgb(0 0 0 / 15%);
+}
+
+.card__hero {
+  line-height: 0.9;
+  position: relative;
+  display: block;
+}
+
+.card__view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 10px;
+}
+:is(.card__hero:hover, .card__hero:visited) .card__view {
+  display: flex;
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card__title {
+  margin: 22px 0 18px;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 600;
+}
+.card__title a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+:is(.card__title, .author) a:hover,
+:is(.card__title, .author) a:active {
+  color: var(--cyan);
+}
+
+.card__description {
+  line-height: 1.5;
+}
+
+.summary {
+  display: flex;
+  font-size: 15px;
+}
+
+.summary__price {
+  font-weight: 600;
+  margin-right: auto;
+  color: var(--cyan);
+}
+
+.summary__time {
+  font-weight: 400;
+}
+
+.summary__price img,
+.summary__time img {
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line) !important;
+  margin: 18px 0;
+}
+
+.author a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.author__avatar {
+  width: 30px;
+  height: auto;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.attribution {
+  font-size: 11px;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  color: var(--white);
+}
+.attribution a {
+  color: var(--cyan);
+}
+
+@media only screen and (min-width: 1440px) {
+  .card__description {
+    font-size: 18px;
+  }
+
+  .summary {
+    font-size: 16px;
+  }
+}
