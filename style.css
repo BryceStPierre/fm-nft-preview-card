@@ -1,12 +1,10 @@
 html {
   height: -webkit-fill-available;
-  min-height: 100vh;
 }
 
 body {
   padding: 0 25px;
   height: -webkit-fill-available;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
